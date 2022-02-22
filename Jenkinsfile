@@ -1,11 +1,6 @@
 pipeline {
   agent any
   stages {
-    stage('Checkout') {
-      steps {
-        git url: 'https://github.com/atjbramley/pipeline_1.git'
-      }
-    }
     stage('Docker build') {
       steps {
         sh 'docker build -t atjb/pipeline_1 .'
